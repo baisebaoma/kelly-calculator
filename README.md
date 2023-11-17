@@ -41,11 +41,11 @@ bj = 10000
     本金 10000 元的情况下，凯利公式推荐赌注为 2666.67 元，本场如果胜利获得 1000.00 元。总期望为 266.67 元。
 
 In the T1 在 S13 全球总决赛决赛上获胜 event, the odds were 1.375, while the odds for its opposing event were 3.18:
-That is, the banker estimated the probability of this event to be 69.81%.
+that is, the banker estimated the probability of this event to be 69.81%.
 If you use the banker's estimated winning rate,
     you will receive an expected -4.01% stake in this game.
 Under your estimated probability of 80.00%:
-    Kelly criterion recommends a bet of 26.67% principal, and in this game you receive the expected 2.67% bet, which is the expected 2.67% principal.
+    Kelly criterion recommends a bet of 26.67% principal, and in this game you receive the expected 10.00% bet, which is the expected 2.67% principal.
     In the case of a principal of 10000 yuan, Kelly criterion recommends a bet of 2666.67 yuan.
     If you win, you will receive 1000.00 yuan. The total expected bet is 266.67 yuan.
 ```
