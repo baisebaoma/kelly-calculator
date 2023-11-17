@@ -15,11 +15,11 @@ note = "T1 在 S13 全球总决赛决赛上获胜"
 # 你估计这个随机事件发生的概率是？
 winrate_estimated_by_yourself = 1
 
-# What is the probability of this random event (including principal)?
+# What are the odds of this random event (including principal)?
 # 这个随机事件的赔率是（包含本金）？
 pl = 1.375
 
-# What is the probability that this random event will not occur?
+# What are the odds that this random event will not occur?
 # 这个随机事件不发生的赔率是？
 pl_negative = 3.180
 
