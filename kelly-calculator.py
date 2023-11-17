@@ -13,7 +13,7 @@ note = "T1 在 S13 全球总决赛决赛上获胜"
 
 # What is your estimate of the probability of this random event occurring?
 # 你估计这个随机事件发生的概率是？
-winrate_estimated_by_yourself = 1
+winrate_estimated_by_yourself = 0.8
 
 # What are the odds of this random event (including principal)?
 # 这个随机事件的赔率是（包含本金）？
@@ -36,25 +36,24 @@ expected_income_percentage = winrate_estimated_by_yourself * (pl - 1) - (1 - win
 
 print(f"在 {note} 事件中，赔率为 {pl}，它的对立事件的赔率为 {pl_negative}：\n"
       f"也就是庄家预估该事件的概率为 {winrate_dealer:.2%}。\n"
-      f"    如果按照庄家预估胜率，本场你获得期望 {winrate_dealer * (pl - 1) - (1 - winrate_dealer):.2%} 赌注，也就是期望 "
-      f"{(winrate_dealer * (pl - 1) - (1 - winrate_dealer)) * kelly_suggested_percentage:.2%} 本金。\n"
+      f"如果按照庄家预估胜率：\n"
+      f"    本场你获得期望 {winrate_dealer * (pl - 1) - (1 - winrate_dealer):.2%} 赌注。\n"
       f"在你预估概率为 {winrate_estimated_by_yourself:.2%} 的情况下：\n"
       f"    凯利公式推荐赌注为 {kelly_suggested_percentage:.2%} 本金，"
       f"本场你获得期望 {expected_income_percentage:.2%} 赌注，也就是期望 "
       f"{expected_income_percentage * kelly_suggested_percentage:.2%} 本金。\n"
       f"    本金 {bj} 元的情况下，凯利公式推荐赌注为 {kelly_suggested_percentage * bj:.2f} 元，"
       f"本场如果胜利获得 {kelly_suggested_percentage * bj * (pl - 1):.2f} 元。"
-      f"总期望为 {(winrate_estimated_by_yourself * (pl - 1) - (1 - winrate_estimated_by_yourself)) * kelly_suggested_percentage * bj:.2f} 元\n"
+      f"总期望为 {(winrate_estimated_by_yourself * (pl - 1) - (1 - winrate_estimated_by_yourself)) * kelly_suggested_percentage * bj:.2f} 元。\n"
       )
 print(f"In the {note} event, the odds were {pl}, while the odds for its opposing event were {pl_negative}:\n"
       f"That is, the banker estimated the probability of this event to be {winrate_dealer:.2%}.\n"
-      f"If you use the banker's estimated winning rate, "
-      f"you will receive an expected {winrate_dealer * (pl - 1) - (1 - winrate_dealer):.2%} stake in this game, "
-      f"which means an expected {(winrate_dealer * (pl - 1) - (1 - winrate_dealer)) * kelly_suggested_percentage:.2%} principal.\n"
+      f"If you use the banker's estimated winning rate,\n"
+      f"    you will receive an expected {winrate_dealer * (pl - 1) - (1 - winrate_dealer):.2%} stake in this game.\n"
       f"Under your estimated probability of {winrate_estimated_by_yourself:.2%}:\n"
-      f"Kelly criterion recommends a bet of {kelly_suggested_percentage:.2%} principal, "
+      f"    Kelly criterion recommends a bet of {kelly_suggested_percentage:.2%} principal, "
       f"and in this game you receive the expected {expected_income_percentage * kelly_suggested_percentage:.2%} bet, "
       f"which is the expected {expected_income_percentage * kelly_suggested_percentage:.2%} principal.\n"
-      f"In the case of a principal of {bj} yuan, Kelly criterion recommends a bet of {kelly_suggested_percentage * bj:.2f} yuan.\n"
-      f"If you win, you will receive {kelly_suggested_percentage * bj * (pl - 1):.2f} yuan. "
+      f"    In the case of a principal of {bj} yuan, Kelly criterion recommends a bet of {kelly_suggested_percentage * bj:.2f} yuan.\n"
+      f"    If you win, you will receive {kelly_suggested_percentage * bj * (pl - 1):.2f} yuan. "
       f"The total expected bet is {(winrate_estimated_by_yourself * (pl - 1) - (1 - winrate_estimated_by_yourself)) * kelly_suggested_percentage * bj:.2f} yuan.")
